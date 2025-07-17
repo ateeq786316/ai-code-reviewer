@@ -1,0 +1,240 @@
+:root {
+  /* Design Tokens: Color Palette */
+  --color-bg: #181a20;
+  --color-surface: #23272f;
+  --color-primary: #4f8cff;
+  --color-primary-accent: #00e0d3;
+  --color-secondary: #ffb300;
+  --color-text: #f5f6fa;
+  --color-text-muted: #a0aec0;
+  --color-error: #ff4d4f;
+  --radius-lg: 1.5rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.375rem;
+  --shadow-elevate: 0 4px 32px rgba(0,0,0,0.18);
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: 
+    /* linear-gradient(rgba(24,26,32,0.92), rgba(24,26,32,0.92)), overlay for dark effect */
+    url('/bg-ai-review.avif') center center/cover no-repeat;  
+  color: var(--color-text);
+  font-family: var(--font-main);
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2.5rem 2vw 2rem 2vw;
+  background: var(--color-surface);
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  transition: box-shadow var(--transition), background var(--transition);
+}
+
+@media (min-width: 700px) {
+  .container {
+    /* max-width: 00px; */
+    /* margin: 3rem auto 2rem auto; */
+    
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-elevate);
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+textarea {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-primary-accent);
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  padding: 1.2rem 1rem;
+  min-height: 160px;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-accent);
+}
+
+.button {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-accent));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.10);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  outline: none;
+  margin: 0 auto;
+  display: block;
+}
+.button:active {
+  transform: scale(0.97);
+}
+.button:focus {
+  box-shadow: 0 0 0 3px var(--color-primary-accent);
+}
+.button:disabled {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+pre {
+  background: #23272f; /* More visible than #181a20, high contrast for dark mode */
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  line-height: 1.6;
+  transition: background var(--transition);
+}
+
+/* Micro-interaction: subtle fade-in for results */
+pre {
+  animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+    border-radius: var(--radius-md);
+  }
+  .title {
+    font-size: 2rem;
+  }
+  textarea {
+    font-size: 1rem;
+    padding: 0.8rem 0.7rem;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+  pre {
+    font-size: 0.98rem;
+    padding: 0.7rem;
+  }
+}
+
+/* Accessibility: High contrast for error states */
+.error {
+  color: var(--color-error);
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Design rationale:
+   - Uses CSS variables for easy theming and dark mode
+   - Modern, bold gradients and glassy surfaces for visual depth
+   - Responsive, mobile-first layout
+   - Micro-interactions for engagement
+   - High contrast and focus states for accessibility
+   - Minimalist, Scandinavian-inspired spacing and typography
+*/ 
+
+.card {
+  background: rgba(36, 40, 47, 0.98);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+  padding: 1.5rem 1.2rem;
+  margin: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1.5px solid rgba(79,140,255,0.10);
+  transition: box-shadow var(--transition), border var(--transition);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.subCard {
+  background: rgba(79,140,255,0.08);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem;
+  margin: 0.3rem 0 0.3rem 0.7rem;
+  box-shadow: 0 1px 4px rgba(79,140,255,0.07);
+  border-left: 3px solid var(--color-primary-accent);
+  font-size: 1.02rem;
+  color: var(--color-text);
+  transition: background var(--transition), border var(--transition);
+}
+
+.riskScore {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  background: rgba(255,179,0,0.08);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem 0.5rem;
+  }
+  .subCard {
+    padding: 0.5rem 0.7rem;
+    margin-left: 0.3rem;
+  }
+} 

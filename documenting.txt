@@ -1,0 +1,56 @@
+                    AI‑Powered Code Review & QA Assistant
+
+# Initialize root project
+mkdir ai-code-reviewer
+cd ai-code-reviewer
+
+# Initialize backend and frontend
+mkdir backend frontend
+================================================================================================================
+cd backend
+npm init -y
+npm install express dotenv cors
+npm install --save-dev typescript ts-node-dev @types/express @types/node @types/cors
+npx tsc --init
+
+mkdir src
+New-Item -Path src\index.ts -ItemType File
+
+================================================================================================================
+in index.ts
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(express.json());
+
+app.get('/', (_req, res) => {
+  res.send('AI Code Reviewer Backend is running 🎯');
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
+================================================================================================================
+
+                                    Setup MVC Structure
+mkdir src\controllers
+mkdir src\routes
+mkdir src\services
+mkdir src\models
+mkdir src\middlewares
+mkdir src\config
+mkdir src\utils
+
+
+================================================================================================================
+
+                                    Setup frontend
+
+npm create vite@latest frontend -- --template react-ts                                  
