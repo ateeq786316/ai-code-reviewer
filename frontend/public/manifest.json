@@ -1,0 +1,35 @@
+{
+  "name": "AI Code Reviewer",
+  "short_name": "AI Code Reviewer",
+  "description": "Intelligent AI-powered code analysis and review platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366F1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["developer", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-large.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/logo-large.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ]
+} 
