@@ -126,7 +126,7 @@ function App() {
                 onClick={() => setCurrentView('chat')}
               >
                 Review Code
-              </button>
+      </button>
             </div>
           </motion.div>
         )}
@@ -412,7 +412,7 @@ function App() {
                 </li>
                 <li className="text-neutral-600">
                   <span className="font-medium">Location:</span> Remote / Worldwide
-                </li>
+                    </li>
               </ul>
             </div>
 
@@ -432,7 +432,7 @@ function App() {
             <p className="text-neutral-600">
               © 2024 AI Code Reviewer. All rights reserved.
             </p>
-          </div>
+            </div>
         </div>
       </footer>
     </div>
