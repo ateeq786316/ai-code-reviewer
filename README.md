@@ -77,17 +77,17 @@ The platform combines the power of Google Gemini AI with sophisticated local ana
 
 ### **Landing Page**
 ![Landing Page]
-(<img width="1903" height="881" alt="ai-code-reviewer-dashboard" src="https://github.com/user-attachments/assets/2ddf3e48-c902-4dcf-a341-251514ffcd88" />)
+<img width="1903" height="881" alt="ai-code-reviewer-dashboard" src="https://github.com/user-attachments/assets/2ddf3e48-c902-4dcf-a341-251514ffcd88" />
 
 
 ### **Code Review Interface**
 ![Code Review Interface]
-(<img width="1919" height="882" alt="ai-code-reviewer-chat" src="https://github.com/user-attachments/assets/d61d2350-d936-4c7d-b6ed-806dbb896ac2" />)
+<img width="1919" height="882" alt="ai-code-reviewer-chat" src="https://github.com/user-attachments/assets/d61d2350-d936-4c7d-b6ed-806dbb896ac2" />
 
 
 ### **Analysis Results**
 ![Analysis Results]
-(<img width="1898" height="878" alt="ai-code-reviewer-results" src="https://github.com/user-attachments/assets/d53a1c7a-da77-472d-a5b7-d8f5c44657a0" />)
+<img width="1898" height="878" alt="ai-code-reviewer-results" src="https://github.com/user-attachments/assets/d53a1c7a-da77-472d-a5b7-d8f5c44657a0" />
 
 
 ---
