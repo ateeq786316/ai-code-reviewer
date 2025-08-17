@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* CSS Variables based on design system */
+    --cgpt-brand-primary: #10A37F;
+    --cgpt-brand-accent: #22D3A3;
+    --cgpt-neutral-0: #0B0F13;
+    --cgpt-neutral-50: #0F141A;
+    --cgpt-neutral-100: #131A21;
+    --cgpt-neutral-200: #1A232C;
+    --cgpt-neutral-300: #253140;
+    --cgpt-neutral-400: #3B4756;
+    --cgpt-neutral-500: #64748B;
+    --cgpt-neutral-600: #94A3B8;
+    --cgpt-neutral-700: #CBD5E1;
+    --cgpt-neutral-800: #E2E8F0;
+    --cgpt-neutral-900: #F8FAFC;
+  }
+
+  body {
+    @apply bg-neutral-0 text-neutral-700 font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white bg-opacity-5 border border-white border-opacity-10 backdrop-blur-md;
+  }
+
+  .card-surface {
+    @apply bg-neutral-100 border border-white border-opacity-10 shadow-soft-2;
+  }
+
+  .btn-primary {
+    @apply bg-brand text-neutral-0 hover:bg-brand-600 shadow-glow-brand focus:ring-4 focus:ring-brand focus:ring-opacity-50 rounded-lg transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-white border-opacity-20 text-neutral-700 hover:bg-white hover:bg-opacity-5 rounded-lg transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-brand hover:bg-brand hover:bg-opacity-10 rounded-lg transition-all duration-300;
+  }
+
+  .input-field {
+    @apply bg-neutral-50 border border-white border-opacity-10 rounded-lg placeholder-neutral-500 text-neutral-800 focus:ring-4 focus:ring-brand focus:ring-opacity-50 focus:border-brand focus:border-opacity-50 transition-all duration-300;
+  }
+
+  .chat-bubble-user {
+    @apply bg-brand bg-opacity-20 border border-brand border-opacity-30 text-neutral-800 rounded-lg;
+  }
+
+  .chat-bubble-assistant {
+    @apply bg-neutral-100 border border-white border-opacity-10 text-neutral-700 rounded-lg;
+  }
+
+  .code-block {
+    @apply bg-[#0C1117] border border-white border-opacity-10 rounded-lg font-mono text-sm;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(60% 80% at 10% 10%, rgba(16,163,127,0.25) 0%, rgba(16,163,127,0.05) 35%, rgba(0,0,0,0) 60%);
+  }
+
+  .cta-gradient {
+    background: linear-gradient(90deg, #10A37F 0%, #22D3A3 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .perspective-900 {
+    perspective: 900px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+} 

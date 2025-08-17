@@ -1,69 +1,175 @@
-# React + TypeScript + Vite
+# AI Code Reviewer Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website built with React, TypeScript, and Tailwind CSS that showcases an AI-powered code review platform with a professional design aesthetic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎨 Design System
+- **Professional AI theme** with modern color palette and typography
+- **Dark mode** with glassmorphism effects
+- **Responsive design** that works on all devices
+- **Smooth animations** powered by Framer Motion
+- **Custom CSS components** built with Tailwind CSS
 
-## Expanding the ESLint configuration
+### 🚀 Landing Page
+- **Hero section** with animated gradient background
+- **Feature showcase** with interactive cards highlighting code review capabilities
+- **Call-to-action sections** with gradient backgrounds
+- **Professional footer** with social links
+- **Mobile-responsive navigation** with hamburger menu
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 💻 Code Review Interface
+- **AI-powered code analysis** with intelligent suggestions
+- **Bug detection** and security vulnerability identification
+- **Code quality assessment** with improvement recommendations
+- **Smooth transitions** between review sessions
+- **Responsive design** for mobile and desktop
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎭 Animations & Interactions
+- **Scroll-triggered animations** using Framer Motion
+- **Hover effects** with 3D transforms
+- **Parallax scrolling** effects
+- **Micro-interactions** throughout the interface
+- **Spring animations** for natural feel
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React 19** - Latest React with hooks
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Lucide React** - Beautiful icon set
+- **Vite** - Fast build tool
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd ai-code-reviewer/frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+frontend/
+├── src/
+│   ├── components/
+│   │   └── ChatInterface.tsx    # Code review interface component
+│   ├── App.tsx                  # Main app with routing
+│   ├── main.tsx                 # Entry point
+│   └── index.css                # Global styles & Tailwind
+├── tailwind.config.js           # Tailwind configuration
+├── postcss.config.js            # PostCSS configuration
+└── package.json                 # Dependencies
+```
+
+## Design System
+
+The website uses a comprehensive design system focused on AI and code review:
+
+### Colors
+- **Brand**: `#10A37F` (professional green)
+- **Accent**: `#22D3A3` (bright green)
+- **Neutral**: Dark grays from `#0B0F13` to `#F8FAFC`
+
+### Typography
+- **Font Family**: Inter (sans-serif)
+- **Weights**: 400, 500, 600, 700
+- **Scale**: xs (12px) to 5xl (48px)
+
+### Spacing
+- **Base Unit**: 4px
+- **Scale**: xxs, xs, sm, md, lg, xl, 2xl, 3xl
+
+### Animations
+- **Duration**: 90ms to 520ms
+- **Easing**: Spring, cubic-bezier, and inertia curves
+- **Keyframes**: Fade-up, hover-tilt, glitch, pulse-glow
+
+## Core Functionality
+
+### AI Code Review Features
+- **Intelligent Code Analysis** - Advanced AI understanding of codebases
+- **Bug Detection** - Automatic identification of potential issues
+- **Smart Suggestions** - Intelligent recommendations for improvements
+- **Quality Assurance** - Automated quality checks and standards compliance
+
+### User Experience
+- **Code Input Interface** - Easy code pasting and submission
+- **Real-time Analysis** - Instant feedback and suggestions
+- **Comprehensive Reports** - Detailed review with actionable insights
+- **Copy Functionality** - Easy sharing of review results
+
+## Customization
+
+### Adding New Components
+1. Create component in `src/components/`
+2. Use Tailwind classes from the design system
+3. Add Framer Motion animations
+4. Import and use in `App.tsx`
+
+### Modifying Colors
+Update the color values in `tailwind.config.js` and `src/index.css`
+
+### Adding Animations
+Define new keyframes in `tailwind.config.js` and use with Framer Motion
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## Performance
+
+- **Lazy loading** for components
+- **Optimized animations** with Framer Motion
+- **Efficient CSS** with Tailwind's purge
+- **Fast builds** with Vite
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- Design inspiration from modern AI platforms
+- Icons from Lucide React
+- Animation library by Framer Motion
+- CSS framework by Tailwind CSS

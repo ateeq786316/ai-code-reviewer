@@ -1,0 +1,35 @@
+ai-code-reviewer/
+├── frontend/                 # React + TypeScript frontend
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── ChatInterface.tsx    # Enhanced AI code review interface
+│   │   ├── App.tsx                  # Main app with landing page & routing
+│   │   ├── main.tsx                 # React entry point
+│   │   ├── index.css                # Tailwind CSS + custom styles
+│   │   ├── App.module.css           # Additional CSS modules
+│   │   └── vite-env.d.ts            # Vite type definitions
+│   ├── public/
+│   │   ├── bg-ai-review.avif        # Background image
+│   │   └── vite.svg                 # Vite logo
+│   ├── tailwind.config.js           # Tailwind configuration
+│   ├── postcss.config.js            # PostCSS setup
+│   ├── tsconfig.json                # TypeScript config
+│   ├── vite.config.ts               # Vite build configuration
+│   ├── eslint.config.js             # ESLint configuration
+│   └── package.json                 # Frontend dependencies
+│
+└── backend/                  # Node.js + Express backend
+    ├── src/
+    │   ├── routes/
+    │   │   ├── codeReviewRoutes.ts      # Code review API endpoints
+    │   │   ├── healthRoute.ts           # Health check endpoint
+    │   │   └── githubWebhookRoute.ts    # GitHub webhook handling
+    │   ├── controllers/
+    │   │   ├── healthController.ts      # Health check logic
+    │   │   └── githubWebhookController.ts # GitHub webhook processing
+    │   ├── services/
+    │   │   └── codeReviewService.ts     # AI code review service
+    │   └── index.ts                     # Express server entry point
+    ├── .env                             # Environment variables
+    ├── tsconfig.json                    # TypeScript configuration
+    └── package.json                     # Backend dependencies

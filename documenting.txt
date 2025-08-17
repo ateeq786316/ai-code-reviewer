@@ -54,3 +54,57 @@ mkdir src\utils
                                     Setup frontend
 
 npm create vite@latest frontend -- --template react-ts                                  
+
+
+
+Project: AI Code Reviewer
+Overview
+AI Code Reviewer is a full-stack web application that leverages AI to automatically review code snippets, providing actionable feedback, bug detection, suggestions, and a risk score for software developers. The project is built using the MERN stack (MongoDB, Express, React, Node.js) with integration of generative AI (Google Gemini) for code analysis.
+Key Features
+AI-Powered Code Review:
+Users can paste code into the frontend, which is then sent to a backend API. The backend uses Google Gemini (or a mock if the API key is missing) to analyze the code and return:
+Detected bugs
+Security issues
+Suggestions for improvement
+A risk score (1–10)
+Modern, Responsive UI:
+The frontend is built with React and styled using CSS modules, providing a clean, modern, and responsive user experience.
+Error Handling & Robustness:
+The app gracefully handles errors from both the frontend and backend, displaying user-friendly messages if something goes wrong.
+Flexible AI Integration:
+If the AI API key is missing, the backend falls back to a mock response, ensuring the app remains functional for demos or development.
+Extensible Backend:
+The backend is structured with clear separation of concerns (routes, controllers, services), making it easy to extend with new features or integrate with other AI models.
+GitHub Webhook Support:
+The backend includes a route to handle GitHub webhooks, enabling automated code review for pull requests (fetches PR diffs and reviews them with AI).
+Dark Themed, Visually Appealing Design:
+Uses a dark color palette and can be customized with background images and overlays for a professional look.
+What Makes It Stand Out
+AI Integration:
+Unlike static linters, this tool uses generative AI to provide context-aware, human-like code reviews, including reasoning and risk assessment.
+User Experience:
+The UI is intuitive, with clear feedback, loading states, and visually distinct cards for bugs, suggestions, and risk scores.
+Developer Friendly:
+The codebase is modular, well-organized, and uses modern best practices (async/await, error boundaries, CSS variables, etc.).
+Demo-Ready:
+The app works out-of-the-box with mock data if the AI API is not configured, making it easy to showcase.
+Automation Ready:
+GitHub webhook support means it can be integrated into CI/CD pipelines for automated PR reviews.
+Technical Stack
+Frontend:
+React (with hooks)
+TypeScript (if enabled)
+CSS Modules
+Backend:
+Node.js
+Express.js
+Integration with Google Gemini AI API
+Webhook support for GitHub
+Other:
+Environment-based configuration (API keys, etc.)
+Modular file structure for scalability
+Example CV Bullet Points
+Developed a full-stack AI-powered code review tool using React, Node.js, and Express, integrating Google Gemini for advanced code analysis and feedback.
+Designed a modern, responsive UI with CSS modules and dark theme, supporting both manual and automated (GitHub webhook) code review workflows.
+Implemented robust error handling and fallback mechanisms, ensuring seamless user experience even when external AI services are unavailable.
+Engineered extensible backend architecture with clear separation of routes, controllers, and services, facilitating future enhancements and integrations.
