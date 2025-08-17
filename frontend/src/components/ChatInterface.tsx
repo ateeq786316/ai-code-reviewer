@@ -80,7 +80,8 @@ export default function ChatInterface({ onBack }: ChatInterfaceProps) {
   useEffect(() => {
     const checkBackendHealth = async () => {
       try {
-        await axios.get('http://localhost:5000/api/health');
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        await axios.get(`${apiUrl}/api/health`);
         console.log('✅ Backend is healthy and ready');
       } catch (error: any) {
         console.warn('⚠️ Backend health check failed:', error.message);
@@ -108,7 +109,8 @@ export default function ChatInterface({ onBack }: ChatInterfaceProps) {
 
     try {
       // Call the backend API for real AI analysis
-      const response = await axios.post('http://localhost:5000/api/review', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await axios.post(`${apiUrl}/api/review`, {
         code: inputValue
       });
 
